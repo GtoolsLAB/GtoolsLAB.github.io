@@ -1,1 +1,13 @@
-#Gtools.css#
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: url('https://i.pinimg.com/originals/d7/33/34/d733345e4f11231904e7634a04439e21.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+p {
+    color: #fff;
+    padding: 5px;
+}
