@@ -2,28 +2,59 @@
     padding: 0;
     margin: 0;
 }
+
 body {
     font-family: sans-serif;
     background-image: url('https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif');
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 p {
     color: #fff;
     padding: 5px;
 }
 
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 #links {
-  color: #fff;
-  background-color: #000;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#links:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #links2 {
-  color: #fff;
-  background-color: #34BE24;
+    color: #fff;
+    background-color: rgba(52, 190, 36, 0.5);
+}
+
+#links2:hover {
+    background-color: rgba(52, 190, 36, 0.7);
 }
 
 #links3 {
-  color: #FEFEFE;
-  background-color: #5587C8;
+    color: #FEFEFE;
+    background-color: rgba(85, 135, 200, 0.5);
+}
+
+#links3:hover {
+    background-color: rgba(85, 135, 200, 0.7);
 }
