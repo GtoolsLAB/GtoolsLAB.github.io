@@ -7,7 +7,7 @@ body, html {
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
-    background: url('https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif') no-repeat center center fixed;
+    background: url('https://your-animation-link') no-repeat center center fixed;
     background-size: cover;
     overflow: hidden;
 }
@@ -55,7 +55,19 @@ body, html {
     width: 100%;
     height: 100%;
     z-index: 0;
-    background: url('https://your-animation-link') no-repeat center center fixed;
+    background: url('https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif') no-repeat center center fixed;
     background-size: cover;
     opacity: 0.5;
+}
+
+body::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
