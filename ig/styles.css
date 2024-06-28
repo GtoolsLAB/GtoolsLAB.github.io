@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #fafafa;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-box, .register-box, .download-app {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+    width: 300px;
+}
+
+.login-image {
+    width: 100%;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+}
+
+.btn-enter {
+    background-color: #3897f0;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #dbdbdb;
+}
+
+.divider span {
+    margin: 0 10px;
+}
+
+.btn-facebook {
+    background-color: #4267B2;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.facebook-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+}
+
+.download-app {
+    text-align: center;
+}
+
+.app-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.app-icon {
+    width: 120px;
+    height: auto;
+    margin: 0 5px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer li {
+    margin: 5px 10px;
+}
+
+footer p {
+    margin: 5px 0;
+}

