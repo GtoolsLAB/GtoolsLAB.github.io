@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Colesterol</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      width: 400px;
+      max-width: 90%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      background: #00c6ff;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0072ff;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+    }
+
+    .result p {
+      margin: 5px 0;
+    }
+
+    /* Recuadro de fórmulas */
+    .formulas {
+      position: fixed;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 14px;
+      max-width: 280px;
+      line-height: 1.4;
+    }
+
+    .formulas h3 {
+      margin-top: 0;
+      font-size: 16px;
+      text-align: center;
+      color: #00c6ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Colesterol</h1>
+    <label for="total">Colesterol Total (mg/dL):</label>
+    <input type="number" id="total">
+
+    <label for="hdl">Colesterol HDL (mg/dL):</label>
+    <input type="number" id="hdl">
+
+    <label for="trig">Triglicéridos (mg/dL):</label>
+    <input type="number" id="trig">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div class="result" id="resultados"></div>
+  </div>
+
+  <!-- Recuadro de fórmulas -->
+  <div class="formulas">
+    <h3>Fórmulas usadas</h3>
+    <p>🔹 VLDL = Triglicéridos / 5</p>
+    <p>🔹 LDL = Col. Total - (HDL + VLDL)</p>
+    <p>  (si Triglicéridos > 200: LDL = Col. Total - HDL - 30)</p>
+    <p>🔹 No-HDL = Col. Total - HDL</p>
+    <p>🔹 Razón Total/HDL = Col. Total / HDL</p>
+    <p>🔹 Razón LDL/HDL = LDL / HDL</p>
+  </div>
+
+  <script>
+    function calcular() {
+      const total = parseFloat(document.getElementById('total').value);
+      const hdl = parseFloat(document.getElementById('hdl').value);
+      const trig = parseFloat(document.getElementById('trig').value);
+
+      if (isNaN(total) || isNaN(hdl) || isNaN(trig)) {
+        document.getElementById('resultados').innerHTML = "<p>⚠️ Por favor, complete todos los campos.</p>";
+        return;
+      }
+
+      // VLDL
+      const vldl = trig / 5;
+
+      // LDL (condición si triglicéridos > 200)
+      let ldl;
+      if (trig > 200) {
+        ldl = total - hdl - 30;
+      } else {
+        ldl = total - (vldl + hdl);
+      }
+
+      // No-HDL
+      const noHdl = total - hdl;
+
+      // Razones
+      const razonTotalHdl = (total / hdl).toFixed(2);
+      const razonLdlHdl = (ldl / hdl).toFixed(2);
+
+      document.getElementById('resultados').innerHTML = `
+        <p><strong>Colesterol VLDL:</strong> ${vldl.toFixed(2)} mg/dL</p>
+        <p><strong>Colesterol LDL:</strong> ${ldl.toFixed(2)} mg/dL</p>
+        <p><strong>Colesterol no-HDL:</strong> ${noHdl.toFixed(2)} mg/dL</p>
+        <p><strong>Razón Total/HDL:</strong> ${razonTotalHdl}</p>
+        <p><strong>Razón LDL/HDL:</strong> ${razonLdlHdl}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
