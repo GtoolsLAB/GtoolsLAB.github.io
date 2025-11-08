@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Clase: Análisis Cualitativo con TIC</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#6c5ce7;
+      --muted:#6b7280;
+      --glass: rgba(255,255,255,0.6);
+      --radius:12px;
+      --maxw:1100px;
+      --gap:18px;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#eef2ff);color:#111;line-height:1.5}
+    .container{max-width:var(--maxw);margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;background:linear-gradient(135deg,var(--accent),#00bcd4);border-radius:10px;display:grid;place-items:center;color:white;font-weight:700}
+    h1{font-size:1.45rem;margin:0}
+    p.lead{margin:4px 0 0;color:var(--muted)}
+
+    nav{margin-top:18px;background:var(--card);padding:12px;border-radius:10px;display:flex;gap:10px;flex-wrap:wrap;box-shadow:0 6px 18px rgba(100,100,120,0.08)}
+    nav a{color:var(--accent);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
+    nav a:hover{background:rgba(108,92,231,0.08)}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:var(--gap);margin-top:18px}
+    main{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(16,24,40,0.06)}
+    aside{position:sticky;top:24px;height:max-content;background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+
+    section{margin-bottom:18px}
+    h2{margin:0 0 8px;font-size:1.1rem}
+    .meta{color:var(--muted);font-size:0.92rem;margin-bottom:12px}
+
+    .card{background:linear-gradient(180deg,var(--glass),rgba(255,255,255,0.9));padding:14px;border-radius:10px;border:1px solid rgba(16,24,40,0.04)}
+    ul{margin:8px 0 12px 18px}
+    .code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;background:#0f172a;color:#e6eef8;padding:8px;border-radius:8px;display:block}
+
+    .activity{display:flex;flex-direction:column;gap:8px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(108,92,231,0.12);color:var(--accent);font-weight:700;font-size:0.85rem}
+
+    footer{margin-top:20px;padding:18px;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    /* responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      aside{position:static}
+      nav{justify-content:center}
+    }
+
+    /* print */
+    @media print{
+      nav, .logo{display:none}
+      body{background:white}
+      .container{margin:0;padding:0}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">AI</div>
+        <div>
+          <h1>Clase: Análisis Cualitativo con TIC</h1>
+          <p class="lead">Módulo 2 — Actividad práctica y guía pedagógica</p>
+        </div>
+      </div>
+      <div class="badge">MAI / ExeLearning</div>
+    </header>
+
+    <nav>
+      <a href="#introduccion">Introducción</a>
+      <a href="#objetivos">Objetivos</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#caso-uso">Caso de uso</a>
+      <a href="#modelos">Modelos pedagógicos</a>
+      <a href="#actividad">Actividad</a>
+      <a href="#interpretacion">Interpretación</a>
+    </nav>
+
+    <div class="grid">
+      <main>
+        <section id="introduccion" class="card">
+          <h2>Introducción</h2>
+          <p class="meta">Breve descripción</p>
+          <p>El análisis cualitativo es una metodología interpretativa orientada a comprender significados, emociones, experiencias y procesos en contextos educativos y sociales. En esta clase se enfatiza el uso de herramientas digitales para facilitar la recolección, codificación y análisis de datos cualitativos.</p>
+        </section>
+
+        <section id="objetivos" class="card">
+          <h2>Objetivos de la clase</h2>
+          <ul>
+            <li>Comprender los fundamentos del análisis cualitativo en investigación educativa.</li>
+            <li>Identificar y aplicar técnicas de recolección: entrevistas, grupos focales, observación y análisis documental.</li>
+            <li>Practicar la codificación y categorización de datos textuales con apoyo de TIC.</li>
+            <li>Interpretar fragmentos de entrevistas y elaborar informes cualitativos coherentes.</li>
+          </ul>
+        </section>
+
+        <section id="recursos" class="card">
+          <h2>Recursos utilizados y adaptaciones</h2>
+          <div class="activity">
+            <div>
+              <strong>Texto interactivo:</strong> Introducción al análisis cualitativo con desplegables y ejemplos. <br><small class="meta">Adaptación: lenguaje accesible y guía paso a paso.</small>
+            </div>
+            <div>
+              <strong>Actividad práctica:</strong> Fragmento de entrevista con preguntas guiadas para identificar códigos y categorías. <br><small class="meta">Adaptación: retroalimentación automática y espacios para respuesta.</small>
+            </div>
+            <div>
+              <strong>Video corto:</strong> Resumen visual del proceso de codificación. <br><small class="meta">Adaptación: subtítulos y transcripción para accesibilidad.</small>
+            </div>
+            <div>
+              <strong>Herramientas:</strong> NVivo, ATLAS.ti, MAXQDA (guías y tutoriales enlazados dentro del MAI). <br><small class="meta">Potencial: sistematizar grandes volúmenes de datos y facilitar visualizaciones.</small>
+            </div>
+          </div>
+        </section>
+
+        <section id="caso-uso" class="card">
+          <h2>Caso de uso</h2>
+          <p class="meta">Aplicación práctica en una escuela</p>
+          <p>Docentes realizan entrevistas y grupos focales a estudiantes para identificar barreras de aprendizaje relacionadas con el uso de TIC. Tras codificar y categorizar los datos, se detectan temas como <em>motivación</em>, <em>participación</em> y <em>relevancia contextual</em>, que orientan el rediseño de actividades didácticas y la selección de recursos digitales.</p>
+        </section>
+
+        <section id="modelos" class="card">
+          <h2>Conexión con modelos pedagógicos</h2>
+          <h3>TPACK</h3>
+          <p class="meta">Integración de tecnologías, pedagogía y contenido</p>
+          <p>La clase integra conocimiento del contenido (análisis cualitativo), conocimiento pedagógico (estrategias activas de enseñanza) y conocimiento tecnológico (eXeLearning, software de codificación). Los estudiantes aplican tecnología para aprender y producir análisis cualitativos.</p>
+
+          <h3>SAMR</h3>
+          <p class="meta">Nivel de integración tecnológica</p>
+          <p>Se sitúa en <strong>Modificación</strong>: las actividades digitales transforman tareas tradicionales (lectura y codificación en papel) en experiencias interactivas con retroalimentación, permitiendo nuevas formas de análisis y colaboración.</p>
+
+          <h3>Motivación, personalización y diversidad</h3>
+          <p>Recursos multimedia, rutas de aprendizaje adaptables y formatos accesibles (transcripciones, subtítulos, lectura en voz) favorecen la motivación y atienden distintos estilos y necesidades de aprendizaje.</p>
+        </section>
+
+        <section id="actividad" class="card">
+          <h2>Actividad desplegable (frag. de entrevista)</h2>
+          <p class="meta">Lee y responde</p>
+          <blockquote>“Muchas veces siento que los alumnos no comprenden del todo el contenido, pero cuando lo llevamos a la práctica, ellos se entusiasman más y participan. Creo que la clave está en adaptar la forma de enseñar a lo que ellos viven todos los días.”</blockquote>
+
+          <h3>Tareas</h3>
+          <ol>
+            <li>Señalá dos frases que puedan considerarse códigos relevantes.</li>
+            <li>Asigná un nombre o etiqueta a cada código.</li>
+            <li>¿Qué categoría temática podría abarcar esos códigos?</li>
+            <li>Explicá la interpretación que sacarías de este fragmento en un informe cualitativo.</li>
+          </ol>
+
+          <details>
+            <summary style="cursor:pointer;padding:8px 10px;border-radius:8px;background:rgba(108,92,231,0.06)">Modelo de respuesta (oculto)</summary>
+            <div style="margin-top:8px">
+              <strong>Códigos:</strong>
+              <ul>
+                <li>"se entusiasman más y participan" — <em>Participación motivada</em></li>
+                <li>"adaptar la forma de enseñar a lo que ellos viven" — <em>Contextualización pedagógica</em></li>
+              </ul>
+              <strong>Categoría temática:</strong>
+              <p><em>Metodologías activas y contextualización</em></p>
+              <strong>Interpretación:</strong>
+              <p>El docente percibe una desconexión entre la exposición teórica y la práctica. La solución observada implica contextualizar el contenido y priorizar actividades prácticas que conecten con la vida cotidiana del alumnado, favoreciendo comprensión y motivación.</p>
+            </div>
+          </details>
+        </section>
+
+        <section id="interpretacion" class="card">
+          <h2>Interpretación y sugerencias para informe cualitativo</h2>
+          <p class="meta">Puntos clave a incluir en el informe</p>
+          <ul>
+            <li>Presentación del contexto y método (tipo de entrevista, número de participantes, criterios de selección).</li>
+            <li>Descripción del proceso de codificación (abierta y axial) y ejemplos de códigos con fragmentos textuales.</li>
+            <li>Triangulación de fuentes: observación en aula y análisis documental para validar patrones.</li>
+            <li>Conclusiones prácticas y recomendaciones para la práctica docente (e.g., integrar más actividades basadas en la vida cotidiana del alumnado).</li>
+          </ul>
+        </section>
+
+      </main>
+
+      <aside>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div class="card">
+            <h3>Ficha rápida</h3>
+            <p class="meta">Duración estimada: 60 minutos</p>
+            <p><strong>Destinatarios:</strong> Profesorado en formación / Docentes en servicio</p>
+            <p><strong>Materiales:</strong> Computadora, proyector, acceso a eXeLearning o similar</p>
+          </div>
+
+          <div class="card">
+            <h3>Evaluación</h3>
+            <ul>
+              <li>Portafolio de evidencias (actividad completada)</li>
+              <li>Informe cualitativo breve (2-3 páginas)</li>
+              <li>Integración en paquete SCORM (comprobación técnica)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Consejos de diseño</h3>
+            <ul>
+              <li>Usa preguntas orientadoras para la codificación.</li>
+              <li>Incluye ejemplos reales y plantillas para facilitar la tarea.</li>
+              <li>Ofrece rutas de profundización para quienes quieran practicar con NVivo u otros.</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Creado para el Portafolio de Evidencias — Clase: Análisis Cualitativo con TIC • Exportar como HTML / integrar en eXeLearning.
+    </footer>
+  </div>
+</body>
+</html>
