@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ITEM-ID | Acceso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container login-box">
+        <h1>ITEM-ID</h1>
+        <p>El Notario Digital de tus objetos.</p>
+
+        <!-- Mensajes de error simples usando JavaScript para leer la URL -->
+        <div id="mensaje" style="color: red; margin-bottom: 10px;"></div>
+        <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            if(urlParams.get('error') == '1') document.getElementById('mensaje').innerText = "Usuario o contraseña incorrectos.";
+            if(urlParams.get('error') == '2') document.getElementById('mensaje').innerText = "Ese email ya está registrado.";
+            if(urlParams.get('success') == '1') {
+                document.getElementById('mensaje').style.color = "green";
+                document.getElementById('mensaje').innerText = "Cuenta creada. Por favor inicia sesión.";
+            }
+        </script>
+
+        <!-- El formulario envía los datos a auth.php -->
+        <form action="auth.php" method="POST">
+            <input type="email" name="email" placeholder="Tu Email" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <div class="buttons">
+                <button type="submit" name="action" value="login" class="btn-primary">Entrar</button>
+                <button type="submit" name="action" value="register" class="btn-secondary">Registrarse</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
